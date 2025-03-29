@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Music } from 'lucide-react';
+import { Music, Calculator } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -10,18 +11,26 @@ const Header = () => {
           <div className="bg-gradient-to-r from-purple-600 to-blue-500 p-2 rounded-lg">
             <Music className="h-5 w-5 text-white" />
           </div>
-          <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-mood">Moodify</h1>
+          <Link to="/">
+            <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-mood">Moodify</h1>
+          </Link>
         </div>
         <nav>
           <ul className="flex gap-6">
             <li>
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">Home</a>
+              <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">Home</Link>
             </li>
             <li>
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">My Playlists</a>
+              <Link to="/calculator" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1">
+                <Calculator className="h-4 w-4" />
+                Calculator
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">About</a>
+              <Link to="#" className="text-sm font-medium hover:text-primary transition-colors">My Playlists</Link>
+            </li>
+            <li>
+              <Link to="#" className="text-sm font-medium hover:text-primary transition-colors">About</Link>
             </li>
           </ul>
         </nav>
