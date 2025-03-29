@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Music, Calculator } from 'lucide-react';
+import { Music, Calculator, Moon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -24,6 +24,12 @@ const Header = () => {
               <Link to="/calculator" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1">
                 <Calculator className="h-4 w-4" />
                 Calculator
+              </Link>
+            </li>
+            <li>
+              <Link to="/sleep-journal" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1">
+                <Moon className="h-4 w-4" />
+                Sleep Journal
               </Link>
             </li>
             <li>
